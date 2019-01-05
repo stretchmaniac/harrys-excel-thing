@@ -14,9 +14,19 @@
     <script type='text/javascript' src='transform.js'></script>
   </head>
   <body>
+    <div id='header'>
+      <div id='title'>Harry's Magic Box</div>
+    </div>
     <div id='container'>
-      <span id='input'></span>
-      <div id='output'></div>
+      <div id='input-container'>
+        <span id='input-label'>Enter expression here!</span>
+        <span id='input'></span>
+      </div>
+      <div id='output-container'>
+        <input id='output' readonly/>
+        <button id='copy-button' onclick="copyToClipboard('output');">Copy!</button>
+        <div id='width-test'></div>
+      </div>
     </div>
   </body>
 </html>

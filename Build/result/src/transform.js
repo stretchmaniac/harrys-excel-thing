@@ -22,8 +22,13 @@ $(function(){
       edit:function(){
         // de-latex it and push to the output
         let result = parseLatex(mathField.latex(), []);
-        $('#output')[0].textContent = result;
+        $('#output').val(result);
       }
     }
   });
 });
+
+function copyToClipboard(containerid) {
+  document.getElementById(containerid).select();
+  document.execCommand('copy');
+}
